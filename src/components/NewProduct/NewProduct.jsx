@@ -6,12 +6,13 @@ import ProductContext from "../../context/ProductContext";
 import "./NewProduct.css";
 
 const NewProduct = ({ NameButton }) => {
-  const { addProductHandler } = useContext(ProductContext);
+  const { userInput, userInputHandler, addProductHandler } =
+    useContext(ProductContext);
 
   return (
     <div className="new-product">
       <form onSubmit={addProductHandler}>
-        <input type="text" />
+        <input type="text" value={userInput} onChange={userInputHandler} />
         <button type="submit">{NameButton}</button>
       </form>
     </div>
