@@ -1,15 +1,15 @@
-import { useContext } from "react";
 import PropTypes from "prop-types";
+
+import { useSelector } from "react-redux";
 
 import ProductList from "./components/ProductList/ProductList";
 import NewProduct from "./components/NewProduct/NewProduct";
-import ProductContext from "./context/ProductContext";
 
 import "./App.css";
 
 function App({ text }) {
-  const { products } = useContext(ProductContext);
-
+  const productList = useSelector((state) => state.productList);
+  const { products } = productList;
   return (
     <div className="App">
       <h2>{text}</h2>
