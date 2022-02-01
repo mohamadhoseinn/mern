@@ -24,7 +24,7 @@ const UserList = ({ items, notFound }) => {
 };
 
 UserList.defaultProps = {
-  notFound: "Page NotFound!",
+  notFound: "There is no user!",
 };
 
 UserList.propTypes = {
