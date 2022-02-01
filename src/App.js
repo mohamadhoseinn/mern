@@ -1,32 +1,25 @@
-import PropTypes from "prop-types";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 
-import { useSelector } from "react-redux";
-
-import ProductList from "./components/ProductList/ProductList";
-import NewProduct from "./components/NewProduct/NewProduct";
+import User from "./user/pages/User";
+import NewPost from "./posts/pages/NewPost";
 
 import "./App.css";
 
-function App({ text }) {
-  const productList = useSelector((state) => state.productList);
-  const { products } = productList;
+function App() {
   return (
-    <div className="App">
-      <h2>{text}</h2>
-      <NewProduct />
-      {products.map((item) => {
-        return <ProductList key={item.id} item={item} />;
-      })}
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<User />} />
+        <Route path="/post/new" element={<NewPost />} />
+        <Route path="/*" element={<Navigate to="/" />} />
+      </Routes>
+    </Router>
   );
 }
-
-App.defaultProps = {
-  text: "Book Store",
-};
-
-ProductList.propTypes = {
-  text: PropTypes.string,
-};
 
 export default App;
