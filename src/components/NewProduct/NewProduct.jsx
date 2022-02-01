@@ -18,6 +18,7 @@ const NewProduct = ({ NameButton }) => {
     e.preventDefault();
 
     dispatch(ProuctListAction(userInput));
+    dispatch(UserInputAction(""));
   };
 
   const userInputHanler = (e) => {

@@ -6,6 +6,6 @@
 
 .product-list li {
   margin: 1rem;
-  border: 1px solid #eee;
+  border: 1px solid rgb(24, 23, 23);
   padding: 1rem;
 }
