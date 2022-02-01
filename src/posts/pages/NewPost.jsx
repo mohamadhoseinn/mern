@@ -1,10 +1,15 @@
-import Input from "../../shared/components/Input/Input";
+import Input from "../../shared/components/FormElement/Input/Input";
 
 const NewPost = () => {
   return (
     <div>
       <form>
-        <Input element="input" type="text" placeholder="text" />
+        <Input
+          element="input"
+          type="text"
+          placeholder="text"
+          errorText="error"
+        />
       </form>
     </div>
   );

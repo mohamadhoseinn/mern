@@ -1,7 +1,11 @@
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 
-const reducer = combineReducers({});
+import InputReducer from "./redux/Input/InputReducer";
+
+const reducer = combineReducers({
+  inputReducer: InputReducer,
+});
 const initialState = {};
 
 const middleware = [thunk];
