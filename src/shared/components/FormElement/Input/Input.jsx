@@ -13,10 +13,10 @@ const Input = ({ element, id, type, placeholder, rows, errorText }) => {
 
   const dispatch = useDispatch();
 
-  const changehandler = (e) => {
-    const amir = e.target.value;
+  const changeHandler = (e) => {
+    const valueEvent = e.target.value;
     dispatch(InputIsValidAction());
-    dispatch(InputVlueAction(amir));
+    dispatch(InputVlueAction(valueEvent));
   };
 
   const elements =
@@ -25,14 +25,14 @@ const Input = ({ element, id, type, placeholder, rows, errorText }) => {
         id={id}
         type={type}
         placeholder={placeholder}
-        onChange={changehandler}
+        onChange={changeHandler}
         value={value}
       />
     ) : (
       <textarea
         id={id}
         rows={rows || 3}
-        onChange={changehandler}
+        onChange={changeHandler}
         value={value}
       />
     );

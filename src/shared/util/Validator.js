@@ -1,0 +1,15 @@
+const typeRequire = "REQUIRED";
+
+export const validatorRequire = () => ({
+  type: typeRequire,
+});
+
+export const validate = (value, validators) => {
+  let isValid = true;
+  for (const validator of validators) {
+    if (validator.type === typeRequire) {
+      isValid = isValid && value.trim().length > 0;
+    }
+  }
+  return isValid;
+};
