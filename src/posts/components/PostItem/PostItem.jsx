@@ -1,3 +1,7 @@
+import Button from "../../../shared/components/FormElement/Button/Button";
+
+import "./PostItem.css";
+
 const PostItem = ({ postItem }) => {
   return (
     <li>
@@ -9,7 +13,7 @@ const PostItem = ({ postItem }) => {
         <h3>{postItem.description}</h3>
       </div>
       <div>
-        <button>Delete</button>
+        <Button to="/amir">Delete</Button>
       </div>
     </li>
   );
