@@ -1,15 +1,13 @@
-import PropTypes from "prop-types";
+import Input from "../../shared/components/Input/Input";
 
-const NewPost = ({ title }) => {
-  return <h2 style={{ textAlign: "center" }}>{title}</h2>;
-};
-
-NewPost.defaultProps = {
-  title: "Posts Page",
-};
-
-NewPost.propTypes = {
-  title: PropTypes.string,
+const NewPost = () => {
+  return (
+    <div>
+      <form>
+        <Input element="input" type="text" placeholder="text" />
+      </form>
+    </div>
+  );
 };
 
 export default NewPost;

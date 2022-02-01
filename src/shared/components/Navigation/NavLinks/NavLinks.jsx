@@ -13,7 +13,7 @@ const NavLinks = () => {
           <NavLink to="/u1/posts">My Posts</NavLink>
         </li>
         <li>
-          <NavLink to="/posts/new">Create Posts</NavLink>
+          <NavLink to="/post/new">Create Posts</NavLink>
         </li>
         <li>
           <NavLink to="/auth">Autenticate</NavLink>
